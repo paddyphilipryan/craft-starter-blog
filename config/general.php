@@ -24,17 +24,10 @@ return [
     'devMode' => $isDev,
 
     // Whether administrative changes should be allowed
-    'allowAdminChanges' => $isDev,
+    'allowAdminChanges' => true,
 
     // Whether crawlers should be allowed to index pages and following links
     'disallowRobots' => !$isProd,
     
-    'staging' => [
-        // Disable project config changes on production
-        'allowAdminChanges' => true,
-    
-    'production' => [
-        // Disable project config changes on production
-        'allowAdminChanges' => true,
-    ],
+
 ];
