@@ -29,3 +29,11 @@ return [
     // Whether crawlers should be allowed to index pages and following links
     'disallowRobots' => !$isProd,
 ];
+
+return [
+    '*' => [],
+    'production' => [
+        // Disable project config changes on production
+        'allowAdminChanges' => true,
+    ],
+];
