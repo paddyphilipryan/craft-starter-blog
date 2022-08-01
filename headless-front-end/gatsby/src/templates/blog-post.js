@@ -13,6 +13,7 @@ export const query = graphql`
       id
       remoteId
       title
+      prReview
       postDate
       bodyContent {
         ...RichTextFragment
@@ -29,7 +30,7 @@ const BlogPostPage = ({ data: { entry } }) => {
     <Layout>
       <Seo title={entry.title} />
       <h1 className="text-4xl text-black font-display my-4">{entry.title}</h1>
-
+      <h2 className="text-4xl text-black font-display my-4">{entry.prReview}</h1>
       <time
         className="text-sm block pb-4"
         dateTime={getStandardDate(entry.postDate)}
